@@ -10,6 +10,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&family=Parisienne&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .detailed-timeline{grid-template-columns:1fr 1fr .72fr;align-items:stretch}
+    .itinerary-card{min-height:430px}
+    .event-list{position:relative;z-index:2;display:grid;gap:0;margin-top:22px;border-top:1px solid rgba(100,23,47,.10)}
+    .featured .event-list{border-top-color:rgba(255,255,255,.14)}
+    .event-row{display:grid;grid-template-columns:82px 1fr;gap:14px;padding:17px 0;border-bottom:1px solid rgba(100,23,47,.10)}
+    .featured .event-row{border-bottom-color:rgba(255,255,255,.14)}
+    .event-time{font-family:"Italiana",serif;color:var(--berry);font-size:1.08rem;line-height:1.25;white-space:nowrap}
+    .featured .event-time{color:#f1c4ce}
+    .event-details{display:grid;gap:5px}
+    .event-details strong{font-size:.9rem;color:var(--wine)}
+    .featured .event-details strong{color:white}
+    .event-details span{font-size:.78rem;line-height:1.55;color:var(--muted)}
+    .featured .event-details span{color:#ead9de}
+    .location-link{font-size:.72rem;line-height:1.5;color:var(--berry);font-weight:700;text-decoration:underline;text-decoration-color:rgba(154,61,91,.35);text-underline-offset:3px}
+    .featured .location-link{color:#f4cbd4;text-decoration-color:rgba(255,255,255,.3)}
+    .location-link:hover{opacity:.75}
+    .overnight-row{border-bottom:0}
+    @media (max-width:1050px){.detailed-timeline{grid-template-columns:1fr 1fr}.detailed-timeline>.timeline-card:last-child{grid-column:1/-1;min-height:auto}.itinerary-card{min-height:440px}}
+    @media (max-width:760px){.detailed-timeline{grid-template-columns:1fr}.detailed-timeline>.timeline-card:last-child{grid-column:auto}.itinerary-card{min-height:auto}.event-row{grid-template-columns:72px 1fr;gap:10px}.event-time{font-size:1rem}}
+  </style>
 </head>
 <body>
   <div class="cursor-glow" aria-hidden="true"></div>
@@ -95,21 +117,64 @@
           <p>Belle is our planner and owns formal lineups, vendor coordination, and wedding logistics. The wedding party's job is to be present, social, helpful, and ready to celebrate.</p>
         </div>
 
-        <div class="timeline">
-          <article class="timeline-card reveal">
-            <div class="date-chip">THU · 19</div>
+        <div class="timeline detailed-timeline">
+          <article class="timeline-card itinerary-card reveal">
+            <div class="date-chip">THU · NOV 19</div>
             <span class="timeline-icon">♡</span>
-            <h3>Welcome Party</h3>
-            <p>Help hand out welcome bags, mingle with all of our guests, make introductions, and set the tone for the weekend.</p>
-            <div class="micro-tags"><span>Welcome bags</span><span>Mingle</span><span>Good energy</span></div>
+            <h3>Rehearsal + Welcome Party</h3>
+            <div class="event-list">
+              <div class="event-row">
+                <div class="event-time">4:00 PM</div>
+                <div class="event-details">
+                  <strong>Bridesmaids Rehearsal</strong>
+                  <span>Cape Sienna Resort · Vanilla Sky Bar</span>
+                  <a class="location-link" href="https://www.google.com/maps/search/?api=1&query=18%2F40%20Moo%206%2C%20Layi-Nakalay%20Road%2C%20Kamala%2C%20Kathu%20District%2C%20Phuket%2083150%2C%20Thailand" target="_blank" rel="noopener noreferrer">18/40 Moo 6, Layi-Nakalay Road, Kamala, Kathu District, Phuket 83150, Thailand ↗</a>
+                </div>
+              </div>
+              <div class="event-row">
+                <div class="event-time">After</div>
+                <div class="event-details">
+                  <strong>Welcome Party · Blue Sea Restaurant</strong>
+                  <span>We’ll head there together immediately after rehearsal. Help hand out welcome bags, mingle with guests, make introductions, and set the tone for the weekend.</span>
+                </div>
+              </div>
+              <div class="event-row overnight-row">
+                <div class="event-time">Night</div>
+                <div class="event-details">
+                  <strong>Overnight at Cape Sienna</strong>
+                  <span>Destinie + Moleda will stay with Yada after the welcome party. Christine + Jenny will already be staying at the resort.</span>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <article class="timeline-card featured reveal">
-            <div class="date-chip">FRI · 20</div>
+          <article class="timeline-card featured itinerary-card reveal">
+            <div class="date-chip">FRI · NOV 20</div>
             <span class="timeline-icon">✦</span>
-            <h3>Wedding Day</h3>
-            <p>Follow Belle for formal logistics, know your personal role below, stay available for Yada, and be fully present for the celebration.</p>
-            <div class="micro-tags"><span>Be ready</span><span>Stay present</span><span>Celebrate</span></div>
+            <h3>Wedding Morning</h3>
+            <div class="event-list">
+              <div class="event-row">
+                <div class="event-time">9:30 AM</div>
+                <div class="event-details">
+                  <strong>Bridesmaids Breakfast</strong>
+                  <span>Meet at Cape Sienna Resort for breakfast together.</span>
+                </div>
+              </div>
+              <div class="event-row">
+                <div class="event-time">11:00 AM</div>
+                <div class="event-details">
+                  <strong>Hair + Makeup Begins</strong>
+                  <span>Be ready to start the getting-ready portion of the day. Keep personal items organized and stay nearby for photos and finishing touches.</span>
+                </div>
+              </div>
+              <div class="event-row">
+                <div class="event-time">Wedding</div>
+                <div class="event-details">
+                  <strong>Follow Belle’s Lead</strong>
+                  <span>Belle handles formal lineups, vendors, and wedding logistics. Know your personal role, stay available for Yada, and enjoy the celebration.</span>
+                </div>
+              </div>
+            </div>
           </article>
 
           <article class="timeline-card reveal">
