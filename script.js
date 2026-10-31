@@ -135,6 +135,49 @@ if (weekendTimeline) {
   `;
 }
 
+// Preserve portrait sharpness by keeping the role-card photos near their native
+// rendered size instead of stretching them across the full card width.
+const portraitStyle = document.createElement('style');
+portraitStyle.textContent = `
+  @media (min-width: 901px) {
+    .role-card:not(.wide) {
+      display: grid;
+      grid-template-columns: minmax(220px, 280px) 1fr;
+      align-items: stretch;
+    }
+    .role-card:not(.wide) .role-image {
+      height: 100%;
+      min-height: 390px;
+    }
+    .role-card.wide {
+      grid-template-columns: 300px 1fr;
+    }
+    .role-card.wide .role-image {
+      height: 100%;
+      min-height: 430px;
+    }
+    .role-image img {
+      image-rendering: auto;
+      object-position: center center;
+    }
+  }
+  @media (max-width: 900px) {
+    .role-image {
+      width: min(100%, 420px);
+      margin-inline: auto;
+      height: auto !important;
+      aspect-ratio: 4 / 5;
+      border-radius: 0 0 24px 24px;
+    }
+    .role-image img {
+      height: 100%;
+      object-fit: cover;
+      image-rendering: auto;
+    }
+  }
+`;
+document.head.appendChild(portraitStyle);
+
 document.querySelectorAll('.role-toggle').forEach((button) => {
   button.addEventListener('click', () => {
     const card = button.closest('.role-card');
