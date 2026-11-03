@@ -24,7 +24,7 @@ if (weekendTimeline) {
   weekendTimeline.innerHTML = `
     <article class="timeline-card itinerary-card reveal">
       <div class="date-chip">THU · NOV 19</div>
-      <span class="timeline-icon">♡</span>
+      <span class="timeline-icon">—</span>
       <h3>Rehearsal + Welcome Party</h3>
       <div class="event-list">
         <div class="event-row">
@@ -55,7 +55,7 @@ if (weekendTimeline) {
 
     <article class="timeline-card featured itinerary-card reveal">
       <div class="date-chip">FRI · NOV 20</div>
-      <span class="timeline-icon">✦</span>
+      <span class="timeline-icon">—</span>
       <h3>Wedding Day</h3>
       <div class="event-list">
         <div class="event-row">
@@ -112,7 +112,7 @@ if (weekendTimeline) {
 
     <article class="timeline-card itinerary-card reveal">
       <div class="date-chip">FRI · 10 PM</div>
-      <span class="timeline-icon">☾</span>
+      <span class="timeline-icon">—</span>
       <h3>After Party</h3>
       <div class="event-list">
         <div class="event-row">
@@ -167,7 +167,7 @@ portraitStyle.textContent = `
       margin-inline: auto;
       height: auto !important;
       aspect-ratio: 4 / 5;
-      border-radius: 0 0 24px 24px;
+      border-radius: 0;
     }
     .role-image img {
       height: 100%;
@@ -177,6 +177,116 @@ portraitStyle.textContent = `
   }
 `;
 document.head.appendChild(portraitStyle);
+
+// Chic editorial styling layer: same wedding palette, less overtly feminine.
+const chicStyle = document.createElement('style');
+chicStyle.textContent = `
+  :root{
+    --wine:#4b1726;
+    --wine-2:#241c1f;
+    --berry:#7b4a57;
+    --rose:#b9aaa8;
+    --pink:#e9e4df;
+    --blush:#f3f0eb;
+    --ivory:#f8f6f2;
+    --cream:#ece7e0;
+    --ink:#1e1b1c;
+    --muted:#70686a;
+    --gold:#9b8565;
+    --shadow:0 18px 45px rgba(30,27,28,.08);
+    --radius:12px;
+  }
+  body{background:#f8f6f2;color:var(--ink)}
+  body::before{opacity:.08;background-size:28px 28px}
+  .cursor-glow{opacity:.18;background:radial-gradient(circle,rgba(75,23,38,.12),transparent 68%)}
+  .nav-wrap{border-radius:6px;background:rgba(248,246,242,.92);border-color:rgba(30,27,28,.1);box-shadow:0 8px 22px rgba(0,0,0,.05)}
+  .nav a{border-radius:3px;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+  .brand span{letter-spacing:.13em}
+
+  .script,.hero-copy h1 em,h2 em,.countdown-title .script,.couple-copy .script,footer .script{font-family:"Italiana",serif!important;font-style:italic!important;transform:none!important;letter-spacing:-.02em}
+  h1,h2,h3{letter-spacing:-.025em}
+  .hero{background:linear-gradient(180deg,#f8f6f2 0%,#fff 72%,#ece7e0 100%)}
+  .hero-copy h1{color:#1e1b1c;letter-spacing:-.045em}
+  .hero-copy h1 em{color:var(--wine);font-size:.62em;margin-left:.18em}
+  .lede{font-size:.98rem;line-height:1.75}
+  .button{border-radius:4px;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;padding:13px 17px}
+  .button-solid{background:#1e1b1c}
+  .button-ghost{border-color:rgba(30,27,28,.18);background:transparent;color:#1e1b1c}
+
+  .spark{display:none}
+  .polaroid{padding:7px 7px 26px;border:1px solid rgba(30,27,28,.1);box-shadow:0 16px 36px rgba(30,27,28,.12)}
+  .polaroid figcaption{font-family:"DM Sans",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.58rem;color:#1e1b1c;font-weight:700}
+  .p1{transform:rotate(-3deg)}.p2{transform:rotate(2deg)}.p3{transform:rotate(-2deg)}.p4{transform:rotate(2deg)}.p5{transform:rotate(-2deg)}
+  .hero-stamp{border-radius:3px;width:112px;height:112px;border:1px solid #f8f6f2;transform:none;background:#1e1b1c}
+  .hero-stamp span{font-size:1.7rem}
+  .hero-stamp small{letter-spacing:.2em}
+
+  .countdown-card{border-radius:8px;background:#1e1b1c;box-shadow:none}
+  .countdown-title .script{color:#d6ccc2;font-size:2rem}
+  .marquee{background:#1e1b1c;border:0}
+  .marquee span{color:#f8f6f2;font-weight:500;letter-spacing:.18em}
+
+  .section{padding:112px 0}
+  .section-head{border-bottom:1px solid rgba(30,27,28,.12);padding-bottom:30px}
+  .section-head h2{color:#1e1b1c}
+  .section-head h2 em{color:var(--wine)}
+  .weekend,.shared-duty{background:#f3f0eb}
+  .timeline{gap:14px}
+  .timeline-card{border-radius:8px;box-shadow:none;border-color:rgba(30,27,28,.11);background:#faf9f7}
+  .timeline-card::after{display:none}
+  .timeline-card.featured{background:#1e1b1c}
+  .date-chip{border-radius:3px;background:#e7e1da;color:#4b1726;letter-spacing:.16em}
+  .featured .date-chip{background:rgba(255,255,255,.08);color:#eee8e1}
+  .timeline-icon{font-size:1rem;color:#8f7f77;margin:20px 0 12px}
+  .event-time{color:#4b1726}
+  .featured .event-time{color:#d7cbc3}
+  .location-link{color:#4b1726}
+
+  .shared-card{border-radius:8px;background:#1e1b1c;box-shadow:none}
+  .shared-card::after{display:none}
+  .shared-copy h2 em{color:#d7cbc3}
+  .shared-list div{border-radius:4px;background:rgba(255,255,255,.035)}
+  .shared-list span{color:#c9bbb2}
+
+  .roles-section{background:#f8f6f2}
+  .roles-grid{gap:16px}
+  .role-card{border-radius:8px;box-shadow:none;border-color:rgba(30,27,28,.11)}
+  .role-card:hover{transform:translateY(-2px)}
+  .role-content{padding:30px 32px}
+  .role-kicker{color:#6f5f62;letter-spacing:.18em}
+  .role-content h3{color:#1e1b1c}
+  .priority{border-radius:3px;background:#f1eee9;color:#4b1726;border-left:3px solid #4b1726}
+  .priority span{display:none}
+  .role-content li{grid-template-columns:12px 1fr}
+  .role-content li::before{content:"—";color:#8b7b75}
+  .role-toggle{color:#1e1b1c;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem}
+
+  .quickref{background:#ece7e0}
+  .quick-grid{gap:14px}
+  .quick-card{border-radius:8px;background:#faf9f7}
+  .quick-card.planner{background:#1e1b1c}
+  .quick-card h3{color:#1e1b1c}
+
+  .couple-feature{background:#fff}
+  .couple-frame{gap:64px}
+  .couple-photo{border-radius:2px!important}
+  .couple-sticker{border-radius:2px!important;background:#1e1b1c!important;color:#f8f6f2!important;font-family:"DM Sans",sans-serif!important;font-size:.68rem!important;text-transform:uppercase;letter-spacing:.12em;padding:10px 12px!important}
+  .couple-copy .script{font-size:2.1rem!important;color:#6f5f62!important}
+
+  footer{background:#1e1b1c!important}
+  footer .script{color:#d6ccc2!important}
+  .footer-hearts{display:none}
+
+  @media(max-width:760px){
+    .nav-wrap{border-radius:4px}
+    .hero-copy h1{font-size:clamp(4.5rem,21vw,7rem)}
+    .hero-stamp{width:88px;height:88px}
+    .section{padding:82px 0}
+    .role-content{padding:24px}
+    .countdown-card{border-radius:6px}
+  }
+`;
+document.head.appendChild(chicStyle);
 
 document.querySelectorAll('.role-toggle').forEach((button) => {
   button.addEventListener('click', () => {
