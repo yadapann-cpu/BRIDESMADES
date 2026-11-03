@@ -77,3 +77,39 @@ footer{position:relative;overflow:hidden;padding:88px 0 100px;background:var(--w
 .couple-copy h2{font-size:clamp(3.2rem,6vw,5.2rem)}
 .couple-copy>p:last-child{max-width:500px;color:var(--muted);line-height:1.8}
 @media(max-width:800px){.couple-feature{padding:58px 0}.couple-frame{grid-template-columns:1fr;gap:28px}.couple-copy{order:-1}.couple-sticker{right:8px;bottom:-14px;font-size:1.15rem}.couple-copy .script{font-size:2.6rem}}
+
+/* Christine portrait: tailored editorial framing */
+.polaroid.p4 {
+  padding: 9px 9px 29px;
+  background: #fffdfa;
+  box-shadow: 0 16px 36px rgba(35, 27, 29, .15);
+}
+.polaroid.p4 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 0;
+  filter: none;
+}
+.role-card[data-role="christine"] .role-image {
+  box-sizing: border-box;
+  padding: 12px;
+  background: #f5f1ec;
+  overflow: hidden;
+}
+.role-card[data-role="christine"] .role-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  background: #f5f1ec;
+  border: 1px solid rgba(52, 44, 42, .12);
+  border-radius: 2px;
+}
+@media (max-width: 600px) {
+  .polaroid.p4 { padding: 7px 7px 25px; }
+  .role-card[data-role="christine"] .role-image { padding: 9px; }
+}
