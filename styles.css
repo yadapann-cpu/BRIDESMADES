@@ -194,3 +194,33 @@ footer{position:relative;overflow:hidden;padding:88px 0 100px;background:var(--w
     max-width: 380px;
   }
 }
+
+/* Jenny portrait clarity — native preview framing */
+.photo-stage .polaroid.p3 {
+  transform: none;
+  will-change: auto;
+}
+.photo-stage .polaroid.p3:hover { transform: translateY(-3px); }
+.photo-stage .polaroid.p3 img {
+  filter: none;
+  transform: none;
+  image-rendering: auto;
+  object-fit: cover;
+  object-position: 50% 27%;
+}
+.role-card[data-role="jenny"] .role-image {
+  background: #f3f0eb;
+}
+.role-card[data-role="jenny"] .role-image img {
+  filter: none;
+  transform: none !important;
+  image-rendering: auto;
+  object-fit: contain;
+  object-position: center 35%;
+}
+@media (max-width:900px) {
+  .role-card[data-role="jenny"] .role-image {
+    max-width: 340px;
+    margin-inline: auto;
+  }
+}
