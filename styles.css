@@ -113,3 +113,50 @@ footer{position:relative;overflow:hidden;padding:88px 0 100px;background:var(--w
   .polaroid.p4 { padding: 7px 7px 25px; }
   .role-card[data-role="christine"] .role-image { padding: 9px; }
 }
+
+/* Portrait and couple photo clarity refinement — 2026-11-03 */
+.photo-stage .polaroid.p1,
+.photo-stage .polaroid.p2 {
+  transform: none;
+  will-change: auto;
+}
+.photo-stage .polaroid.p1:hover,
+.photo-stage .polaroid.p2:hover {
+  transform: translateY(-3px);
+}
+.photo-stage .polaroid.p1 img,
+.photo-stage .polaroid.p2 img {
+  filter: none;
+  image-rendering: auto;
+  object-fit: cover;
+  object-position: 50% 32%;
+}
+.role-card[data-role="destinie"] .role-image img,
+.role-card[data-role="moleda"] .role-image img {
+  filter: none;
+  transform: none !important;
+  image-rendering: auto;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+.role-card[data-role="destinie"] .role-image,
+.role-card[data-role="moleda"] .role-image {
+  background: #f1eee9;
+}
+.couple-photo { transform: none; }
+.couple-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+  image-rendering: auto;
+}
+@media (max-width: 900px) {
+  .role-card[data-role="destinie"] .role-image,
+  .role-card[data-role="moleda"] .role-image {
+    max-width: 380px;
+  }
+}
