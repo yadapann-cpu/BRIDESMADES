@@ -160,3 +160,37 @@ footer{position:relative;overflow:hidden;padding:88px 0 100px;background:var(--w
     max-width: 380px;
   }
 }
+
+/* Menelope image clarity tuning */
+.photo-stage .polaroid.p5 {
+  transform: none;
+  will-change: auto;
+}
+.photo-stage .polaroid.p5:hover {
+  transform: translateY(-3px);
+}
+.photo-stage .polaroid.p5 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: none;
+  transform: none;
+  object-fit: cover;
+  object-position: 50% 24%;
+  image-rendering: auto;
+}
+.role-card[data-role="menelope"] .role-image {
+  background: #f1eee9;
+}
+.role-card[data-role="menelope"] .role-image img {
+  filter: none;
+  transform: none !important;
+  object-fit: contain;
+  object-position: 50% 30%;
+  image-rendering: auto;
+}
+@media (max-width: 900px) {
+  .role-card[data-role="menelope"] .role-image {
+    max-width: 380px;
+  }
+}
