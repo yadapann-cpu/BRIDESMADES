@@ -80,6 +80,13 @@ if (weekendTimeline) {
           </div>
         </div>
         <div class="event-row">
+          <div class="event-time">2:00 PM</div>
+          <div class="event-details">
+            <strong>Moleda · Bridal Suite Drinks</strong>
+            <span>A little refreshment run for the girls — keep the bridal suite stocked and the good vibes flowing.</span>
+          </div>
+        </div>
+        <div class="event-row">
           <div class="event-time">3:00 PM</div>
           <div class="event-details">
             <strong>Bridesmaid Portraits</strong>
@@ -94,6 +101,13 @@ if (weekendTimeline) {
           </div>
         </div>
         <div class="event-row">
+          <div class="event-time">4:15 PM</div>
+          <div class="event-details">
+            <strong>Destinie · Bridal Suite Reset</strong>
+            <span>Start tidying up and packing Yada’s belongings so nothing gets left behind.</span>
+          </div>
+        </div>
+        <div class="event-row">
           <div class="event-time">4:45 PM</div>
           <div class="event-details">
             <strong>Wedding Party Lineup</strong>
@@ -105,6 +119,13 @@ if (weekendTimeline) {
           <div class="event-details">
             <strong>Wedding Begins</strong>
             <span>Ceremony begins promptly at Cape Sienna. Wedding celebration runs until 10:00 PM.</span>
+          </div>
+        </div>
+        <div class="event-row">
+          <div class="event-time">9:30 PM</div>
+          <div class="event-details">
+            <strong>Moleda + Destinie · After-Party Look</strong>
+            <span>Help Yada slip into her after-party fit — then it’s time to dance.</span>
           </div>
         </div>
       </div>
