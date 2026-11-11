@@ -64,7 +64,7 @@ if (weekendTimeline) {
       </div>
       <div class="event-list">
         <div class="event-row">
-          <div class="event-time">9:30 AM</div>
+          <div class="event-time">10:00 AM</div>
           <div class="event-details">
             <strong>Breakfast with the Bride</strong>
             <span>Cape Sienna Resort.</span>
