@@ -57,6 +57,11 @@ if (weekendTimeline) {
       <div class="date-chip">FRI · NOV 20</div>
       <span class="timeline-icon">—</span>
       <h3>Wedding Day</h3>
+      <div style="position:relative;z-index:2;margin:18px 0 6px;padding:16px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.07)">
+        <strong style="display:block;font-size:.88rem;margin-bottom:9px;letter-spacing:.04em">Before Your Glam Appointment</strong>
+        <p style="margin:0 0 8px;font-size:.79rem;line-height:1.6;color:#ead9de"><strong style="color:white">Hair:</strong> Wash and fully blow-dry your hair before your appointment — for hair-only and hair + makeup alike.</p>
+        <p style="margin:0;font-size:.79rem;line-height:1.6;color:#ead9de"><strong style="color:white">Makeup:</strong> Arrive with a clean, bare face. No moisturizer, serum, or skincare products — your artist will prep your skin.</p>
+      </div>
       <div class="event-list">
         <div class="event-row">
           <div class="event-time">9:30 AM</div>
@@ -70,6 +75,34 @@ if (weekendTimeline) {
           <div class="event-details">
             <strong>Get Ready with the Bride</strong>
             <span>Meet in the bridal suite and be fully ready for the getting-ready portion of the day.</span>
+          </div>
+        </div>
+        <div class="event-row">
+          <div class="event-time">12:00 PM</div>
+          <div class="event-details">
+            <strong>Yada · Bridal Hair + Makeup</strong>
+            <span>The bride’s glam begins.</span>
+          </div>
+        </div>
+        <div class="event-row">
+          <div class="event-time">12:30 PM</div>
+          <div class="event-details">
+            <strong>Menelope · Hair</strong>
+            <span>Hair-only appointment.</span>
+          </div>
+        </div>
+        <div class="event-row">
+          <div class="event-time">1:00 PM</div>
+          <div class="event-details">
+            <strong>Moleda · Hair + Makeup</strong>
+            <span>Full glam appointment. Christine on standby for hair at 1:00 PM.</span>
+          </div>
+        </div>
+        <div class="event-row">
+          <div class="event-time">1:30 PM</div>
+          <div class="event-details">
+            <strong>Jenny · Hair Standby</strong>
+            <span>Be ready for your hair-only appointment.</span>
           </div>
         </div>
         <div class="event-row">
