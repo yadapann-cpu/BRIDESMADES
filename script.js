@@ -95,7 +95,14 @@ if (weekendTimeline) {
           <div class="event-time">1:00 PM</div>
           <div class="event-details">
             <strong>Moleda · Hair + Makeup</strong>
-            <span>Full glam appointment. Christine on standby for hair at 1:00 PM.</span>
+            <span>Full glam appointment.</span>
+          </div>
+        </div>
+        <div class="event-row">
+          <div class="event-time">1:00 PM</div>
+          <div class="event-details">
+            <strong>Christine · Hair Standby</strong>
+            <span>Be ready for your hair-only appointment.</span>
           </div>
         </div>
         <div class="event-row">
